@@ -96,6 +96,8 @@ function processOperation($userName, $operand_1, $operand_2, $operand_3)
     */
     for ($i = 0; $i < count($historyArray); $i++) {
 
+         
+
         $currentContent = $historyArray[$i]->getContent();
 
         if ($currentContent == implode("+", [$operand_1, $operand_2]) || $currentContent == implode("+", [$operand_1, $operand_2, $operand_3])) {
@@ -140,7 +142,7 @@ function processOperation($userName, $operand_1, $operand_2, $operand_3)
 
             $historyArray[] = $newOperation;
 
-            $_SESSION["sessionList"] = $historyArray;
+            $_SESSION["sessionList"] = serialize($historyArray);
         }
     }
     $returnContent = $OperationFound ?  $historyMessage . " and the result is : " . $finalResult : $finalResult;
