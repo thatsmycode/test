@@ -13,9 +13,9 @@ session_set_cookie_params([
     "httponly" => true
 ]);
 
-if (session_status() == PHP_SESSION_NONE) {
+
     session_start();
-}
+
 
 // Regenerate session_id each 30 minutes
 
