@@ -8,7 +8,7 @@ ini_set("session.use_strict_mode", 1);
 
 
 session_set_cookie_params([
-    3600,"testeteste.adaptable.app/index.php","/",true,true
+    "lifetime" => 3600
 ]);
 
 
