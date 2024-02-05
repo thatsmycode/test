@@ -9,7 +9,7 @@ ini_set("session.use_strict_mode", 1);
 
 session_set_cookie_params([
     "lifetime" => 3600,
-    "domain" => "testeteste.adaptable.app/config.php",
+    "domain" => ".testeteste.adaptable.app",
     "path" => "/",
     "secure" => true,
     "httponly" => true
